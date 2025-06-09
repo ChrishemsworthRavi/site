@@ -31,26 +31,27 @@ export default function Home() {
     });
   };
 
-  const scrollPills = (direction) => {
-    if (!pillScrollRef.current) return;
-    const amount = 300;
+const scrollPills = (direction: 'left' | 'right') => {
+  if (!pillScrollRef.current) return;
+  const amount = 300;
 
-    pillScrollRef.current.scrollBy({
-      left: direction === "left" ? -amount : amount,
-      behavior: "smooth",
-    });
+  pillScrollRef.current.scrollBy({
+    left: direction === "left" ? -amount : amount,
+    behavior: "smooth",
+  });
 
-    // Enable left arrow once user scrolls right
-    if (direction === "right") setCanScrollLeft(true);
+  // Enable left arrow once user scrolls right
+  if (direction === "right") setCanScrollLeft(true);
 
-    // Disable left arrow if scrolled back to start
-    if (
-      direction === "left" &&
-      pillScrollRef.current.scrollLeft - amount <= 0
-    ) {
-      setCanScrollLeft(false);
-    }
-  };
+  // Disable left arrow if scrolled back to start
+  if (
+    direction === "left" &&
+    pillScrollRef.current.scrollLeft - amount <= 0
+  ) {
+    setCanScrollLeft(false);
+  }
+};
+
   return (
     <>
       {/* Fixed Navbar */}
