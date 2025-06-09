@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 import Navbar from '@/components/ui/Navbar';
 import { Card, CardTitle, CardDescription, CardHeader, CardFooter } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Image from 'next/image';
 import img1 from '@/lib/img1.png';
 import img2 from '@/lib/img2.png';
